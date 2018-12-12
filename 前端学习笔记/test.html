@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sessionStorage</title>
+</head>
+<body>
+	<input type="text" id="userName"><br>
+	<input type="button" value="setData" id="setData">
+	<input type="button" value="getData" id="getData">
+	<input type="button" value="deleteData" id="deleteData">
+	<script>
+		// 存储数据
+		document.querySelector('#setData').onclick = function () {
+			var name = document.querySelector('#userName').value
+			window.sessionStorage.setItem("userName",name)
+		}
+		// 获取数据
+		document.querySelector('#getData').onclick = function () {
+			var name = window.sessionStorage.getItem("userName")
+			alert(name)	
+		}
+		// 删除数据
+		document.querySelector('#deleteData').onclick = function () {
+			window.sessionStorage.removeItem("userName")
+		}
+	</script>
+</body>
+</html>
