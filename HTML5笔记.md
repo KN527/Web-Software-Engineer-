@@ -34,12 +34,9 @@
 		</script>
 	</body>
 	</html>
-	
-	
 	localStorage的使用：存储数据到本地。存储的容量20mb左右
 	tips：1、同一浏览器不同窗口可以共享数据，但是不同浏览器不可以
 		  2、永久生效，这个数据本质是存储在硬盘上，不会随着页面或者浏览器的关闭而清楚，如果想清除必须手动
-	
 	<!DOCTYPE html>
 	<html lang="en">
 	<head>
@@ -93,28 +90,24 @@
 			<img src="./images/l3.jpg" alt="">
 			<img src="./images/l4.jpg" alt="">
 		</body>
-		</html>
-		
+		</html>		
 		demo.appacahe:
 		CACHE MANIFEST
 		#上面一句代码必须是当前文档的第一句
 		（#号后面的为注释）
-
 		#需要缓存的文件清单列表
 		CACHE:
 		../images/l1.jpg
 		../images/l2.jpg
-		# "*" :代表所有文件
-
+		*# "*" :代表所有文件*
 		#配置每一次都需要重新从服务器获取的文件清单列表
 		NETWORK:
 		../images/l3.jpg
-
 		#配置如果文件无法获取则使用指定的文件进行替代
 		FALLBACK:
 		../images/l4.jpg ../images/banner_1.jpg
 		# "/" :代表所有文件
-	
+
 八、自定义播放器（接口说明和界面说明）
 	![Image text](https://QQ图片20181213001142.png)
 	<video src=""></video>
@@ -128,3 +121,4 @@
 		a) oncanplay 事件在用户可以开始播放视频/音频(video/audio)时触发
 		b) ontimeupdate 通过改时间来报告当前的播放进度
 		c) onended 播放完时触发（重置）
+	*示例见H5_video.html*
