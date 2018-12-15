@@ -55,30 +55,24 @@ box-shadow: none | <shadow> [, <shadow>] *
  	font-size: 30px;
  }
  class="red"\class="redyellow"都有效
- ```
->5)、E[attr\$=value]:查找指定的拥有attr属性并且属性值以value结尾的的E标签。
 ```
+>5)、E[attr\$=value]:查找指定的拥有attr属性并且属性值以value结尾的的E标签。
+ ```
  li[class$=red]{
  	font-size: 30px;
  }
  class="red"\class="darkred"都有效
  ```  
 
- 2、伪类选择器
- a) `a:hover a:link a:active a:visited`
- b) 以某元素相对于其父元素或兄弟元素的位置来获取无素的结构伪类
- >1)、兄弟伪类
- >+:获取当前元素相邻的满足条件的元素
- ```
-  .first + li{
-  	color: blue;
-  }
-  必须是指定类型的元素和相邻的元素
-  ```
- >~:获取当前元素满足条件的兄弟元素
- ```
-  .first ~ li{
-  	color: pink;
-  }
-  必须是满足条件的兄弟元素
-  ```
+ 2、伪类选择器  
+ a) `a:hover a:link a:active a:visited`  
+ b) 以某元素相对于其父元素或兄弟元素的位置来获取无素的结构伪类  
+	> E:first-child:查找E这个元素的父元素的第一个子元素E
+	> E:last-child:最后一个子元素
+	> E:nth-child(n): 第n个子元素，计算方法是E元素的全部兄弟元素
+	> E:nth-last-child(n): 同E:nth-child(n) 相似，只是倒着计算
+	> E:nth-child(even): 所有的偶数
+	> E:nth-child(odd): 所有的奇数
+	> E:nth-of-type(n):指定类型
+	> E:empty 选中没有任何子节点的E元素，注意，空格也算子元素
+	> E:target 结合锚点进行使用，处于当前锚点的元素会被选中
