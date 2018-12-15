@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			background-color: rgb(153 194 36);
+		}
+
+		.body {
+			margin: 200px auto;
+			width: 200px;
+			height: 200px;
+			border-radius: 0px 0px 40px 40px;
+			position: relative;
+		}
+
+		.head {
+			width: 200px;
+			height: 80px;
+			border-radius: 100px 100px 0 0/80px 80px 0 0;
+			position: absolute;
+			top: -90px;
+		}
+
+		.head::before {
+			content: "";
+			width: 20px;
+			height: 20px;
+			border-radius: 10px;
+			background-color: #FFFFFF;
+			position: absolute;
+			top: 40px;
+			left: 50px;
+		}
+
+		.head::after {
+			content: "";
+			width: 20px;
+			height: 20px;
+			border-radius: 10px;
+			background-color: #FFFFFF;
+			position: absolute;
+			top: 40px;
+			right: 50px;
+		}
+		
+		.arm {
+			width: 50px;
+			height: 160px;
+			border-radius: 25px;
+			position: absolute;
+			top: -5px;
+		}
+
+		.left {
+			left: -60px;
+		}
+
+		.right {
+			right: -60px;
+		}
+
+		.body::before {
+			content: "";
+			width: 40px;
+			height: 80px;
+			border-radius: 0 0 20px 20px;
+			background-color: rgb(153 194 36);
+			position: absolute;
+			bottom: -80px;
+			left: 40px
+		}
+
+		.body::after {
+			content: "";
+			width: 40px;
+			height: 80px;
+			border-radius: 0 0 20px 20px;
+			background-color: rgb(153 194 36);
+			position: absolute;
+			bottom: -80px;
+			right: 40px
+		}
+	</style>
+</head>
+<body>
+	<div class="body">
+		<div class="head"></div>
+		<div class="left arm"></div>
+		<div class="right arm"></div>
+	</div>
+</body>
+</html>
