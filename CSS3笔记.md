@@ -63,7 +63,7 @@ box-shadow: none | <shadow> [, <shadow>] *
  }
  class="red"\class="darkred"都有效
  ```
----
+
 2、伪类选择器
 a) `a:hover a:link a:active a:visited`
 b) 以某元素相对于其父元素或兄弟元素的位置来获取无素的结构伪类
