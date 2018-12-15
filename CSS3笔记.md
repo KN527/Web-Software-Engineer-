@@ -21,7 +21,7 @@
  6、 {} 表示范围  
 
 比如：
-> padding: [<length> | <percentage>]{1,4}  
-> border: <line-width> || <line-style> || <color>  
-> box-shadow: none | <shadow> [, <shadow>]*  
+> "padding: [<length> | <percentage>]{1,4}"  
+> "border: <line-width> || <line-style> || <color>"
+> "box-shadow: none | <shadow> [, <shadow>] * "
 
