@@ -62,23 +62,23 @@ box-shadow: none | <shadow> [, <shadow>] *
  	font-size: 30px;
  }
  class="red"\class="darkred"都有效
- ```
+ ```  
 
-2、伪类选择器
-a) `a:hover a:link a:active a:visited`
-b) 以某元素相对于其父元素或兄弟元素的位置来获取无素的结构伪类
->1)、兄弟伪类
->+:获取当前元素相邻的满足条件的元素
->```
- .first + li{
- 	color: blue;
- }
- 必须是指定类型的元素和相邻的元素
- ```
->~:获取当前元素满足条件的兄弟元素
->```
- .first ~ li{
- 	color: pink;
- }
- 必须是满足条件的兄弟元素
- ```
+ 2、伪类选择器
+ a) `a:hover a:link a:active a:visited`
+ b) 以某元素相对于其父元素或兄弟元素的位置来获取无素的结构伪类
+ >1)、兄弟伪类
+ >+:获取当前元素相邻的满足条件的元素
+ >```
+  .first + li{
+  	color: blue;
+  }
+  必须是指定类型的元素和相邻的元素
+  ```
+ >~:获取当前元素满足条件的兄弟元素
+ >```
+  .first ~ li{
+  	color: pink;
+  }
+  必须是满足条件的兄弟元素
+  ```
