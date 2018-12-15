@@ -22,6 +22,6 @@
 
 比如：
 > padding: [<length> | <percentage>]{1,4}
-	border: <line-width> || <line-style> || <color>
-	box-shadow: none | <shadow> [, <shadow>]
+> border: <line-width> || <line-style> || <color>
+> box-shadow: none | <shadow> [, <shadow>]
 
