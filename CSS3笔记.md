@@ -26,3 +26,14 @@ padding: [<length> | <percentage>]{1,4}
 border: <line-width> || <line-style> || <color>
 box-shadow: none | <shadow> [, <shadow>] * 
 ```
+- - -
+### 选择器
+ 1、属性选择器
+ 属性是相对于标签而言，所谓属性选择器就是根据指定名称的属性的值来查找元素
+>1、E[attr]:查找指定的拥有attr属性的E标签。
+>```
+ li[style]{
+ 	text-decoration: underline;
+ }
+ ```
+ 
