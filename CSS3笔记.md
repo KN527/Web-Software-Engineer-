@@ -86,10 +86,11 @@ box-shadow: none | <shadow> [, <shadow>] *
 >> iii.	E:after、E:before   在旧版本里是伪类，在新版本里是伪元素，新版本下E:after、E:before会被自动识别为E::after、E::before，按伪元素来对待，这样做的目的是用来做兼容处理  
 >> iv.	E::before: 定义在一个元素的内容之前插入content属性定义的内容与样式  
 >> v.	E::after: 定义在一个元素的内容之后插入content属性定义的内容与样式  
->> vi.	注意：  
+>> vi.	注意：
 >>> 1.IE6、IE7与IE8（怪异模式Quirks mode）不支持此伪元素  
 >>> 2.CSS2中 E:before或者E:after，是属于伪类的，并且没有伪元素的概念，CSS3中 提出伪元素的概念    
 E::before和E::after，并且归属到了伪元素当中，伪类里就不再存在E:before或者E:after伪类  
+
 > b)	E::first-letter文本的第一个字母或字(不是词组)  
 > c)	E::first-line 文本第一行  
 > d)	E::selection 可改变选中文本的样式  
