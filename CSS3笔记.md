@@ -79,6 +79,7 @@ box-shadow: none | <shadow> [, <shadow>] *
 > E:target 结合锚点进行使用，处于当前锚点的元素会被选中
 
  3.	伪元素选择器：  
+
 > a)	重点：E::before、E::after  
 >> i.	是一个行内元素，需要转换成块:display:block   float:**  position:  
 >> ii.	必须添加content,哪怕不设置内容，也需要content:""   
