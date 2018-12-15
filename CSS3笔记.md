@@ -78,7 +78,7 @@ box-shadow: none | <shadow> [, <shadow>] *
 > E:empty 选中没有任何子节点的E元素，注意，空格也算子元素
 > E:target 结合锚点进行使用，处于当前锚点的元素会被选中
 
- 3.	伪元素选择器：  
+ 3.伪元素选择器：  
 
 > a)	重点：E::before、E::after  
 >> i.	是一个行内元素，需要转换成块:display:block   float:**  position:  
@@ -87,8 +87,8 @@ box-shadow: none | <shadow> [, <shadow>] *
 >> iv.	E::before: 定义在一个元素的内容之前插入content属性定义的内容与样式  
 >> v.	E::after: 定义在一个元素的内容之后插入content属性定义的内容与样式  
 >> vi.	注意：  
->>> 1.	IE6、IE7与IE8（怪异模式Quirks mode）不支持此伪元素  
->>> 2.	CSS2中 E:before或者E:after，是属于伪类的，并且没有伪元素的概念，CSS3中 提出伪元素的概念    
+>>> 1.IE6、IE7与IE8（怪异模式Quirks mode）不支持此伪元素  
+>>> 2.CSS2中 E:before或者E:after，是属于伪类的，并且没有伪元素的概念，CSS3中 提出伪元素的概念    
 E::before和E::after，并且归属到了伪元素当中，伪类里就不再存在E:before或者E:after伪类  
 > b)	E::first-letter文本的第一个字母或字(不是词组)  
 > c)	E::first-line 文本第一行  
