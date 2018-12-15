@@ -20,8 +20,9 @@
  5、 *  表示0个或多个  
  6、 {} 表示范围  
 
-比如：
-> "padding: [<length> | <percentage>]{1,4}"  
-> "border: <line-width> || <line-style> || <color>"
-> "box-shadow: none | <shadow> [, <shadow>] * "
-
+例如：
+```
+padding: [<length> | <percentage>]{1,4} 
+border: <line-width> || <line-style> || <color>
+box-shadow: none | <shadow> [, <shadow>] * 
+```
