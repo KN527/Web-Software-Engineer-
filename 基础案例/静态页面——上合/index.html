@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>尚合手机</title>
+	<style type="text/css">
+		body,ul,li,a,p{
+			margin: 0;
+			padding: 0;
+		}
+		a{
+			text-decoration: none;
+		}
+		ul,li{
+			list-style: none;
+		}
+		.title{
+			width: 980px;
+			height: 62px;
+			position: relative;
+			margin: 0 auto;
+		}
+		.logo{
+			width: 179px;
+			height: 39px;
+			position: absolute;
+			bottom: 3px;
+		}
+		.search{
+			width: 196px;
+			height: 30px;
+			position: absolute;
+			right: 0px;
+			bottom: 11px;
+		}
+		.nav{
+			height: 55px;
+			background: url(nav_bg.png);
+		}
+		.nav_con{
+			width: 960px;
+			margin:0 auto;
+		}
+		.nav .nav_con ul li{
+			float: left;
+		}
+		.nav .nav_con ul li a{
+			text-decoration: none;
+			display: inline-block;
+			height: 55px;
+			font: 14px/55px microsoft yahei;
+			font-weight: 700;
+			color: #000;
+			padding: 0 44px;
+			background: url(nav_bg-line.png) no-repeat right top;
+		}
+		.nav .nav_con a:hover{
+			color: #9FCA47;
+		}
+		.banner{
+			width: 980px;
+			height: 597px;
+			background: url(banner.jpg) no-repeat;
+			margin: 0 auto;
+		}
+		.notice{
+			height: 30px;
+			background: #FBFBFB;
+			border-top: 1px solid #EFEFEF;
+			border-bottom: 1px solid #EFEFEF;
+		}
+		.notice_cont{
+			width: 980px;
+			height: 30px;
+			margin: 0 auto;
+		}
+		.notice_cont_text{
+			font: 12px/30px microsoft yahei;
+			float: left;
+		}
+		.share{
+			width: 82px;
+			height: 16px;
+			float: right;
+			margin-top: 7px;
+		}
+		.content{
+			width: 980px;
+			height: 226px;
+			/*border: 1px solid #E4E4E4;*/
+			margin: 17px auto;
+		}
+		.content_box{
+			width: 312px;
+			height: 226px;
+			border: 1px solid #E4E4E4;
+			float: left;
+			position: relative;
+		}
+		.box1{
+			width: 310px;
+		}
+		.box2{
+			width: 373px;
+		}
+		.box3{
+			width: 265px
+		}
+		.box2,.box3{
+			margin-left: 13px;
+		}
+		.box_title{
+			/*display: inline-block;*/
+			height: 14px;
+			width: 90px;
+			text-indent: 2em;
+			font: 12px microsoft yahei;
+			background: url(o.jpg) no-repeat left;
+			position: absolute;
+			left:6px;
+			top:15px;
+		}
+		.box_title a{
+			color: #9FCA47
+		}
+		.box1_img_left{
+			position: absolute;
+			left: 20px;
+			top: 120px;
+		}
+		.box1_img_right{
+			position: absolute;
+			right: 20px;
+			top: 120px;
+		}
+		.box1_img{
+			position: absolute;
+			left: 60px;
+			top: 50px;
+		}
+		.content .box2 ul{
+			position: absolute;
+			left: 23px;
+			top: 38px;
+		}
+		.content .box2 li{
+			width: 332px;
+			height: 28px;
+			border-bottom: 2px dashed #DEDEDE;
+			font: 12px/28px microsoft yahei;
+		}
+		ul .one{
+			color: red;
+		}
+		.box3 ul{
+			position: absolute;
+			left: 23px;
+			top: 40px;			
+		}
+		.box3 ul li{
+			width: 90px;
+			height: 13px;
+			border-left: 3px solid #9FCA47;
+			font: 12px/12px microsoft yahei;
+			text-indent: 1em;
+			margin-bottom: 9px;
+		}
+		.box3 .tel{
+			position: absolute;
+			left: 23px;
+			bottom: 45px;
+			font: 12px/12px microsoft yahei;
+		}
+		.box3 .tel p{
+			margin-top: 5px;
+		}
+		.footer{
+			height: 221px;
+			background: #2D2D2D;
+			border-bottom: 2px dashed #C7C7C7;
+		}
+		.footer_nav{
+			width: 980px;
+			height: 75px;			
+			margin: 0 auto;
+		}
+		.footer ul{
+			margin-top: 7px;
+			float: left;
+			margin-right: 62px;
+		}
+		.footer a{
+			color: #707070;
+			font:12px/34px microsoft yahei;
+		}
+		.footer .one a{
+			color: #C7C7C7;
+		}
+		.copy{
+			height: 85px;
+			background: #2D2D2D;
+			padding-top: 31px;
+		}
+		.copy ul{
+			width: 980px;
+			margin: 0 auto;
+			/*position: relative;*/
+		}
+		.copy li{
+			font: 12px/14px microsoft yahei;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="title">
+		<div class="logo">
+			<a href="#">
+				<img src="logo.jpg" alt="">
+			</a>
+		</div>
+		<div class="search">
+			<input type="text" style="width: 160px;height: 26px;border:1px solid #ECECEC;position: absolute;left: 0px;top: 0px;" value="请输入...">
+			<img src="search2.jpg" style="position: absolute;right: 1px;top: 0px;">
+		</div>
+	</div>
+	<div class="nav">
+		<div class="nav_con">
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">智能手机</a></li>
+				<li><a href="#">平板电脑</a></li>
+				<li><a href="#">配件</a></li>
+				<li><a href="#">服务支持</a></li>
+				<li><a href="#">关于尚合</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="banner"></div>
+	<div class="notice">
+		<div class="notice_cont">
+			<div class="notice_cont_text">最新公告：尚合Aone智能手机入网证已获取工信部门审批下发。尚合官网</div>
+			<div class="share">
+				<a href="#" style="float: left;"><img src="zone.png" alt=""></a>
+				<a href="#" style="float: left;margin-left: 6px"><img src="weibo.png" alt=""></a>
+				<a href="#" style="float: left;margin-left: 6px"><img src="xinlang.png" alt=""></a>
+				<a href="#" style="float: left;margin-left: 6px"><img src="renren.png" alt=""></a>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="content_box box1">
+			<div class="box_title"><a href="#">新品发布</a></div>
+			<div class="box1_img_left"><img src="left.png" alt=""></div>
+			<div class="box1_img"><a href="#"><img src="home_hot_01.png" alt=""></a></div>
+			<div class="box1_img_right"><img src="right.png" alt=""></div>
+		</div>
+		<div class="content_box box2">
+			<div class="box_title"><a href="#">新闻中心</a></div>
+			<ul>
+				<li class="one">致歉公告</li>
+				<li>首批尚合Aonet已全部售馨!</li>
+				<li>【媒体报导】国产高性价比 尚合Aonet四核手机评测</li>
+				<li>我司产品已经通过了国家强制性产品3C认证</li>
+				<li>尚合Aone智能手机入网证已经获工信部门审批下发.</li>
+				<li>我司通过ISO9001:2008国际质量管理体系认证</li>
+			</ul>
+		</div>
+		<div class="content_box box3">
+			<div class="box_title"><a href="#">技术与支持</a></div>
+			<ul>
+				<li>售后服务</li>
+				<li>投诉与建议</li>
+				<li>联保网点</li>
+				<li>常见问题FAQ</li>
+			</ul>
+			<div class="tel">
+				<p>深圳市汇聚众合科技发展有限公司</p>
+				<p>服务热线：400-633-7922</p>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer_nav">
+			<ul>
+				<li class="one"><a href="#">尚合首页</a></li>
+				<li><a href="#">尚合首页</a></li>
+			</ul>
+			<ul>
+				<li class="one"><a href="#">尚合首页</a></li>
+				<li><a href="#">尚合首页</a></li>
+			</ul>
+			<ul>
+				<li class="one"><a href="#">尚合首页</a></li>
+				<li><a href="#">尚合首页</a></li>
+			</ul>
+			<ul>
+				<li class="one"><a href="#">尚合首页</a></li>
+				<li><a href="#">尚合首页</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="copy">
+		<ul>
+			<li>深圳市会居中和优先公司深圳市会居中和优先公司深圳市会居中和优先公司深圳市</li>
+			<li>会居中和优先公司深圳市会居中和优先公司深圳市会居中和优先公司</li>
+		</ul>
+	</div>
+</body>
+</html>
