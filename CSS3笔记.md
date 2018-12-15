@@ -36,4 +36,16 @@ box-shadow: none | <shadow> [, <shadow>] *
  	text-decoration: underline;
  }
  ```
- 
+>2、E[attr=value]:查找指定的拥有attr属性并且属性值为value的E标签。 “=”是严格匹配
+>```
+ li[class=red]{
+ 	font-size: 30px;
+ }
+ ```
+>3、E[attr\*=value]:查找指定的拥有attr属性并且属性值中包含value（可以在任意位置）的E标签。 “=”是严格匹配
+>```
+ li[class*=red]{
+ 	font-size: 30px;
+ }
+ class="red"\class="darkred"都有效
+ ```
