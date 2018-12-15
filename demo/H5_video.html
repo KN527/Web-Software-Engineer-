@@ -26,5 +26,95 @@
 		</div>
 	</div>	
 	<script src="../demo/js/jquery.min.js"></script>
+	<script>
+		//通过jq来实现播放功能
+		$(function () {
+			//1、获取播放器
+			//*video标签必须通过js来操作，因此需要将jq对象转化为dom
+			var video=$("video")[0];
+
+			//2、实现暂停和播放
+			$(".switch").click(function () {
+				if (video.paused) {
+					video.play();
+					//暂停
+				} else {
+					video.pause();
+					//播放
+				}
+				$(this).toggleClass("fa-play fa-pause");
+			});
+
+			//3、实现全屏切换
+			$(".expand").click(function () {
+				if (video.requestFullScreen) {
+					video.requestFullScreen();
+				}
+				else if (video.webkitRequestFullScreen) {
+					video.webkitRequestFullScreen();
+				}
+				else if (video.mozRequestFullScreen) {
+					video.mozRequestFullScreen();
+				}
+				else if (video.msRequestFullScreen) {
+					video.msRequestFullScreen();
+				}
+			});
+
+			//*封装一个将总时长变成时分秒的函数以供后面调用
+			function timeCal(time) {
+				//hours
+				hours = Math.floor(time/3600);
+				hours = hours<10? "0"+hours:hours;
+				//minutes
+				minutes = Math.floor((time-hours*3600)/60);
+				minutes = minutes<10? "0"+minutes:minutes;
+				//seconds
+				seconds = Math.floor(time%3600);
+				seconds = seconds<10? "0"+seconds:seconds;
+
+				return hours + ":" + minutes + ":" + seconds;
+			};
+
+			//4、视频可以播放时，做出以下处理,当视频可以播放时会触发ontimeupdate事件
+			video.oncanplay=function () {
+				setTimeout(function () {
+					//显示播放器
+					video.style.display = "block";
+					//计算出视频的总时长，并在播放器上显示出来
+					var total=video.duration;
+					var result=timeCal(total);
+					$(".totalTime").html(result);
+				},2000);
+			};
+
+			//5、实现播放过程中的业务逻辑，当视频播放时会触发ontimeupdate事件
+			video.ontimeupdate=function () {
+				//将视频当前播放时间显示出来
+				var current=video.currentTime;
+				var result=timeCal(current);
+				$(".currentTime").html(result);
+				//配合播放时间调整播放进度条的长度
+				var percent=current/video.duration*100 + "%";
+				$(".elapse").css("width",percent);
+			};
+
+			//6、实现跳转播放
+			$(".bar").click(function (e) {
+				//当播放条（bar）被点击时，获取其相对于父元素的坐标值(offsetX)
+				var position = e.offsetX;
+				//计算相对应bar条的相对位置百分比,并得出相应的播放时间
+				var current=position/$(this).width()*video.duration;
+				//跳转到相对应的播放进度
+				video.currentTime=current;			
+			});
+
+			//7、播放完毕后，重置播放器状态*/
+			video.onended=function () {
+				video.currentTime=0;
+				$(".switch").removeClass("fa-pause").addClass("fa-play");
+			}
+		});
+	</script>
 </body>
 </html>
