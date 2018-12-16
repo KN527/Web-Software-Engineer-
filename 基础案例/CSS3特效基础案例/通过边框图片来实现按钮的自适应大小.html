@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		div {
+			text-align: center;
+			border: solid 10px;
+			border-image-source: url("./images/btn_bg.png");
+			/*border-image-slice内的数字不需要写px，否则会失效*/
+			border-image-slice: 10 fill;
+			border-image-repeat: stretch;
+		}
+
+		.btn1 {
+			width: 150px;
+			height: 30px;
+			font: bold 15px/30px Simhei;
+		}
+
+		.btn2 {
+			width: 300px;
+			height: 60px;
+			font: bold 15px/60px Simhei;
+		}
+	</style>
+</head>
+<body>
+	<div class="btn1">150px/30px按钮</div>
+	<div class="btn2">300px/60px按钮</div>
+</body>
+</html>
