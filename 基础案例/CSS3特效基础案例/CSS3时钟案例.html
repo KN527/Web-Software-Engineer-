@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时钟</title>
+	<style>
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+		div {
+			background-color: #999;
+		}
+		.clock {
+			width: 400px;
+			height: 400px;
+			margin: 30px auto;
+			background-color: #FFFFFF;
+			border: solid 10px #999;
+			box-sizing: border-box;
+			border-radius: 200px;
+			position: relative;
+		}
+		.line {
+			width: 10px;
+			height: 380px;
+			background-color: #999;
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translate(-50%,0);
+		}
+		.line:nth-of-type(1){
+			width: 12px;
+		}
+		.line:nth-of-type(2){
+			transform: translate(-50%,0) rotate(30deg);
+		}
+		.line:nth-of-type(3){
+			transform: translate(-50%,0) rotate(60deg);
+		}
+		.line:nth-of-type(4){
+			width: 12px;
+			transform: translate(-50%,0) rotate(90deg);
+		}
+		.line:nth-of-type(5){
+			transform: translate(-50%,0) rotate(120deg);
+		}
+		.line:nth-of-type(6){
+			transform: translate(-50%,0) rotate(150deg);
+		}
+		.cover {
+			width: 320px;
+			height: 320px;
+			background-color: #FFFFFF;
+			border-radius: 160px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.hour {
+			width: 8px;
+			height: 80px;
+			background-color: #0000FF;
+			border-radius: 3px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-100%);
+			transform-origin: center bottom;
+			/*43200s动画完成*/
+			-webkit-animation: move 43200s linear infinite;
+			-o-animation: move 43200s linear infinite;
+			animation: move 43200s linear infinite;
+		}
+		.minute {
+			width: 5px;
+			height: 100px;
+			background-color: #666600;
+			border-radius: 3px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-100%);
+			transform-origin: center bottom;
+			/*3600s动画完成*/
+			-webkit-animation: move 3600s linear infinite;
+			-o-animation: move 3600s linear infinite;
+			animation: move 3600s linear infinite;
+		}
+		.second {
+			width: 2px;
+			height: 120px;
+			background-color: #FF0000;
+			border-radius: 3px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-100%);
+			transform-origin: center bottom;
+			/*60s动画完成*/
+			-webkit-animation: move 60s linear infinite;
+			-o-animation: move 60s linear infinite;
+			animation: move 60s linear infinite;
+		}
+		.center {
+			width: 16px;
+			height: 16px;
+			border-radius: 8px;
+			background-color: #999;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		/*设置动画*/
+		@keyframes move {
+			0% {
+				transform: translate(-50%,-100%) rotate(0deg);
+			}
+			100% {
+				transform: translate(-50%,-100%) rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="clock">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="cover"></div>
+		<div class="hour"></div>
+		<div class="minute"></div>
+		<div class="second"></div>
+		<div class="center"></div>
+	</div>
+</body>
+</html>
