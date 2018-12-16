@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transition</title>
+	<style>
+		.demo1 {
+			width: 150px;
+			height: 150px;
+			background-color: #FF0000;
+			position: absolute;
+			left: 100px;
+			top: 50px;
+			/*transition:属性名称 过渡时间 时间函数 延迟 ,[]* */
+			transition: left 2s ease 0s;
+		}
+		/*单击*/
+		.demo1:active {
+			left: 1000px;
+		}
+
+		.demo2 {
+			width: 150px;
+			height: 150px;
+			background-color: #00FF00;
+			position: absolute;
+			left: 100px;
+			top: 250px;
+			/*transition:属性名称 过渡时间 时间函数 延迟 ,[]* */
+			transition: left 2s ease 0s,background-color 2s linear 0s;
+		}
+		/*单击*/
+		.demo2:active {
+			left: 500px;
+			background-color: #0000FF;
+		}
+
+		.demo3 {
+			width: 150px;
+			height: 150px;
+			background-color: #0000FF;
+			position: absolute;
+			border-radius: 0 0 0 0;
+			left: 100px;
+			top: 450px;
+			/*transition:属性名称 过渡时间 时间函数 延迟 ,[]* */
+			transition: left 2s ease 0s,background-color 2s linear 0s,border-radius 2s linear 0s;
+		}
+		/*单击*/
+		.demo3:hover {
+			left: 800px;
+			background-color: #9900FF;
+			border-radius: 75px 0px 50px 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="demo1"></div>
+	<div class="demo2"></div>
+	<div class="demo3"></div>
+</body>
+</html>
