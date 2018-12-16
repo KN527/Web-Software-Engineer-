@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>无缝滚动</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		div {
+			width: 700px;
+			height: 100%;
+			margin: 20px auto;
+			overflow: hidden;
+		}
+		div > ul {
+			width: 1400px;
+			height: 100%;
+			list-style:none;
+			/*1、设置动画名称*/
+			animation-name: scroll;
+			/*2、设置动画耗时*/
+			animation-duration: 7s;
+			/*3、设置无限循环*/
+			animation-iteration-count: infinite;
+			/*4、设置时间函数*/
+			animation-timing-function: linear;
+		}
+		/*创建动画*/
+		@keyframes scroll {
+			0% {
+				transform: translateX(0px);
+			}
+			100% {
+				transform: translateX(-700px);
+			}
+		}
+		div:hover > ul {
+			animation-play-state: paused;
+		}
+		div > ul > li {
+			float: left;
+		}
+		img {
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li><img src="./images/1.jpg" alt=""></li>
+			<li><img src="./images/2.jpg" alt=""></li>
+			<li><img src="./images/3.jpg" alt=""></li>
+			<li><img src="./images/4.jpg" alt=""></li>
+			<li><img src="./images/5.jpg" alt=""></li>
+			<li><img src="./images/6.jpg" alt=""></li>
+			<li><img src="./images/7.jpg" alt=""></li>
+			<li><img src="./images/1.jpg" alt=""></li>
+			<li><img src="./images/2.jpg" alt=""></li>
+			<li><img src="./images/3.jpg" alt=""></li>
+			<li><img src="./images/4.jpg" alt=""></li>
+			<li><img src="./images/5.jpg" alt=""></li>
+			<li><img src="./images/6.jpg" alt=""></li>
+			<li><img src="./images/7.jpg" alt=""></li>
+		</ul>
+	</div>
+</body>
+</html>
