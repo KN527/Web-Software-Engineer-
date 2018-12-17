@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>宽高自适应</title>
+	<style>
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+		.layout {
+			width: 800px;
+			height: 1000px;
+			margin: 10px auto;
+			display: flex;
+			/*将伸缩盒子排列的主轴从row变成column*/
+			flex-direction: column;
+		}
+		.header {
+			width: 100%;
+			height: 150px;
+			background-color: red;
+		}
+		.footer {
+			width: 100%;
+			height: 150px;
+			background-color: blue;
+		}
+		.content {
+			width: 100%;
+			flex: 1;
+			display: flex;
+		}
+		.left {
+			flex: 1;
+			height: 100%;
+			background-color: pink;
+		}
+		.right {
+			flex: 3;
+			height: 100%;
+			background-color: yellow;
+		}
+	</style>	
+</head>
+<body>
+	<div class="layout">
+		<div class="header">header</div>
+		<div class="content">
+			<div class="left">left</div>
+			<div class="right">right</div>
+		</div>
+		<div class="footer">footer</div>
+	</div>
+</body>
+</html>
