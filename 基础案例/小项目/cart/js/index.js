@@ -18,13 +18,12 @@ $(function () {
 		            y = y + 1;
 		            // console.log(x,y);
 		            $(".handPointer").css("left",x).css("top",y);
-		   		 });
+		   		 }).find('.again').on('click',function () {
+						$('.now,.leave').removeClass('now').removeClass('leave');
+						$.fn.fullpage.silentMoveTo(1,0);
+					});
 			}
-			$('.again').on('click' ,function () {
-				$('.now, .leave').removeClass('.now');
-				$('.now, .leave').removeClass('.leave');
-				$.fn.fullpage.silentMoveTo(1,0);
-			}) 
+			 
 			
 		},
 		afterRender: function () {

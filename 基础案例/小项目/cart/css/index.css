@@ -468,7 +468,7 @@
 }
 /*离开页面动画*/
 .screen05.leave .sofa {
-	animation: billSofaDown2 1s linear;
+	animation: billSofaDown2 1.5s linear;
 }
 @keyframes billSofaDown2 {
 	0% {
@@ -547,12 +547,12 @@
 	left: 200px;
 	top: 465px;
 	z-index: 1001;
-	transform: scale(0.3);
-	-webkit-animation: postBox 2s linear 1s;
-	-o-animation: postBox 2s linear 1s;
-	animation: postBox 2s linear 1s;
+	transform: scale(0.3);	
 }
 .screen06.now .box {	
+	-webkit-animation: postBox 1.5s linear;
+	-o-animation: postBox 1.5s linear;
+	animation: postBox 1.5s linear;
 }
 @keyframes postBox {
 	0% {
