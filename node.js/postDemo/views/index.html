@@ -6,23 +6,18 @@
 	<link rel="stylesheet" href="/public/lib/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
-	<header class="header container">
+	<div class="header container">
 		<div class="page-header">
-			<h1>首页<small>留言板</small></h1>
-			<a href="/post" class="btn">发表留言</a>
+			<h1>首页<small>留言板 </small></h1>
+			<a href="/post" class="btn btn-success">发表留言</a>
 		</div>
-		<div class="comments container">
-			<ul class="list-group">
-				<li class="list-group-item">
-					<span class="pull-right">
-						
-					</span>
-				</li>
-			</ul>
-		</div>
-		
-
-	</header>
-	<main></main>
+	</div>
+	<div class="comments container">
+		<ul class="list-group">
+			{{each comments}}
+			<li class="list-group-item">{{ $value.name }}说：{{ $value.message }}<span class="pull-right">{{ $value.dateTime }}</span></li>
+			{{/each}}
+		</ul>
+	</div>
 </body>
 </html>
