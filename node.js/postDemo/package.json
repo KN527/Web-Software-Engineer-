@@ -5,6 +5,7 @@
   "main": "app-exp.js",
   "dependencies": {
     "art-template": "^4.13.2",
+    "body-parser": "^1.18.3",
     "bootstrap": "^4.2.1",
     "express": "^4.16.4",
     "express-art-template": "^1.0.1",
