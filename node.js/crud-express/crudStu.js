@@ -66,40 +66,44 @@ exports.save = function (student, callback) {
 
 /*保存编辑学生信息*/
 exports.updateById = function (student, callback) {
-	fs.readFile(dbPath, 'utf8', function (err, data) {
-		if (err) {
-			return callback(err)
-		}
-		var students = JSON.parse(data).students
-		/*注意：这里记得把id统一转换为数字类型*/
-		student.id = parseInt(student.id)
+  fs.readFile(dbPath, 'utf8', function (err, data) {
+    if (err) {
+      return callback(err)
+    }
+    var students = JSON.parse(data).students
 
-		//需要修改谁，就把谁找出来
-		//ES6中的一个数组方法：find
-		//需要接受一个函数作为参数
-		//当某个遍历项符合item.id === student.id 条件的时候，find终止查找，并返回该遍历项
-		var oldStu = students.find(function (item) {
-			return item.id === student.id
-		})
+    // 注意：这里记得把 id 统一转换为数字类型
+    student.id = parseInt(student.id)
+    console.log(student)
+    // 你要修改谁，就需要把谁找出来
+    // EcmaScript 6 中的一个数组方法：find
+    // 需要接收一个函数作为参数
+    // 当某个遍历项符合 item.id === student.id 条件的时候，find 会终止遍历，同时返回遍历项
+    var stu = students.find(function (item) {
+      return item.id === student.id
+    })
 
-		//遍历拷贝对象
-		for (var key in student){
-			oldStu[key] = student[key]
-		}
+    console.log(stu)
+    // 遍历拷贝对象
+    for (var key in student) {
+      stu[key] = student[key]
+    }
 
-		// 把对象数据转化为字符串
-		var fileData = JSON.stringify({
-			students: students
-		})
+    // 把对象数据转换为字符串
+    var fileData = JSON.stringify({
+      students: students
+    })
 
-		// 把字符串保存到文件中
-		fs.writeFile(dbPath, fileData, function (err) {
-			if (err) {
-				return callback(err)
-			}
-			callback(null)
-		})
-	})
+    // 把字符串保存到文件中
+    fs.writeFile(dbPath, fileData, function (err) {
+      if (err) {
+        // 错误就是把错误对象传递给它
+        return callback(err)
+      }
+      // 成功就没错，所以错误对象是 null
+      callback(null)
+    })
+  })
 }
 
 /*删除指定学生信息*/

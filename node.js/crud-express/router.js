@@ -19,22 +19,6 @@ var router = express.Router()
 // 2、把路由都挂载到 router 路由容器中
 
 // 渲染学生列表页面
-router.get('/', function (req, res) {
-	Student.find(function (err, students) {
-		if(err) {
-			return res.status(500).send('Server error')
-		}
-		res.render('index.html', {
-			fruits: [
-			'苹果',
-			'香蕉',
-			'橘子'
-			],
-			students: students
-		})
-	})
-})
-
 router.get('/students/', function (req, res) {
 	Student.find(function (err, students) {
 		if(err) {
@@ -78,7 +62,7 @@ router.get('/students/edit', function (req, res) {
 		根据id把学生信息查出来
 		使用模板引擎渲染页面
 	*/
-	Student.findById(parseInt(req.query.id), function (err, res) {
+	Student.findById(parseInt(req.query.id), function (err, student) {
 		if (err) {
 			return res.status(500).send('Server error.')
 		}
@@ -102,6 +86,7 @@ router.post('/students/edit', function (req, res) {
 		res.redirect('/students')
 	})
 })
+
 
 // 处理删除学生
 router.get('/students/delete', function (req, res) {

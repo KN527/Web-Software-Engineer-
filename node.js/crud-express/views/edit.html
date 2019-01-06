@@ -55,11 +55,14 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">新增学生</h1>
 
-          <form action="/students/new" method="post">
-            <input type="hidden" value="{{ student.id }}">
+          <form action="/students/edit" method="post">
+            <!-- 
+            用来放一些不希望被用户看见，但是需要被提交到服务端的数据
+           -->
+            <input type="hidden" name="id" value="{{ student.id }}">
             <div class="form-group">
               <label for="name">姓名</label>
-              <input type="name" class="form-control" name="name" required minlength="2" maxlength="10" value="{{ student.name}}">
+              <input type="name" class="form-control" name="name" required minlength="2" maxlength="10" value="{{ student.name }}">
             </div>
             <div class="form-group">
               <label for="gender">性别</label>
