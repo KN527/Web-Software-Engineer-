@@ -8,5 +8,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "bootstrap": "^3.3.7",
+    "express-art-template": "^1.0.1",
+    "jquery": "^3.3.1"
+  }
 }
