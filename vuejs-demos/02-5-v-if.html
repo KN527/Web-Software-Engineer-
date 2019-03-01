@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box {
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<input type="checkbox" v-model="seen">
+		<hr>
+		<!-- div与seen绑定，seen为true时显示，false时隐藏 -->
+		<div v-if="seen" class="box"></div>
+	</div>
+<script src="node_modules/vue/dist/vue.js"></script>
+<script>
+	const app = new Vue({
+		el:'#app',
+		data: {
+			seen: true
+		}
+	})
+</script>
+</body>
+</html>
